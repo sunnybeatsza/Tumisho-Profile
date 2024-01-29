@@ -1,0 +1,11 @@
+body {
+  background-color: black !important;
+  font-family: "Montserrat", sans-serif;
+  color: whitesmoke;
+}
+
+.nav-bar li {
+  display: inline;
+  margin-left: 1.2rem;
+  font-size: 1.2rem;
+}
