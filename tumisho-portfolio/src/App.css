@@ -1,11 +1,152 @@
-body {
-  background-color: black !important;
-  font-family: "Montserrat", sans-serif;
-  color: whitesmoke;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.nav-bar li {
-  display: inline;
-  margin-left: 1.2rem;
-  font-size: 1.2rem;
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: black !important;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+p {
+  color: white;
+}
+
+a,
+.btn {
+  transition: all 300ms ease;
+}
+
+/* Your existing CSS code */
+
+a {
+  text-decoration: none !important;
+  color: white;
+  position: relative;
+  font-size: 1.25rem;
+  margin-right: 0.7rem;
+}
+
+a::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px; /* Adjust the underline thickness as needed */
+  background-color: #381659;
+  bottom: -2px;
+  left: 0;
+  transition: width 0.3s ease-in-out; /* Adjust the duration and easing as needed */
+}
+
+a:hover::before {
+  width: 100%;
+}
+
+a:hover {
+  color: #381659;
+}
+
+nav,
+#nav-list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+nav {
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+  height: 17vh;
+}
+
+#nav-list li {
+  margin-right: 1.3rem;
+  text-decoration: none;
+  font-size: 1.1rem;
+  margin-top: 1.3rem;
+}
+
+#main-logo {
+  color: white;
+}
+
+.profile-photo {
+  border-radius: 50%;
+  width: 16rem;
+  height: 16rem;
+}
+
+#hero-header {
+  color: white;
+}
+
+.moreMargin {
+  margin-top: 5rem !important;
+  margin-bottom: 5rem !important;
+}
+
+.text-center {
+  margin-bottom: 3rem !important;
+}
+
+.background-img {
+  background-image: url("");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 25rem;
+}
+
+#profile {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  height: 80vh;
+}
+
+.section__pic-container {
+  display: flex;
+  height: 400px;
+  width: 400px;
+  margin: auto 0;
+}
+
+.section__text {
+  align-self: center;
+  text-align: center;
+}
+
+.section__text p {
+  font-weight: 600;
+}
+
+.section__text__p1 {
+  text-align: center;
+}
+
+.section__text__p2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 3rem;
+  text-align: center;
+}
+
+#socials-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+.moreMargin2 {
+  margin-top: 8rem !important;
 }
