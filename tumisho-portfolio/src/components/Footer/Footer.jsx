@@ -7,27 +7,27 @@ export const Footer = () => {
         <footer className="py-3 my-4">
           <ul className="nav justify-content-center border-bottom pb-3 mb-3">
             <li className="nav-item">
-              <a href="#" className="nav-link px-2 text-light">
+              <a href="index.html" className="nav-link px-2 text-light">
                 Home
               </a>
             </li>
             <li className="nav-item">
-              <a href="#" className="nav-link px-2 text-light">
-                About
+              <a href="#About-me" className="nav-link px-2 text-light">
+                About me
               </a>
             </li>
             <li className="nav-item">
-              <a href="#" className="nav-link px-2 text-light">
-                Service
+              <a href="#Services" className="nav-link px-2 text-light">
+                Services
               </a>
             </li>
             <li className="nav-item">
-              <a href="#" className="nav-link px-2 text-light">
+              <a href="#Portfolio" className="nav-link px-2 text-light">
                 Portfolio
               </a>
             </li>
             <li className="nav-item">
-              <a href="#" className="nav-link px-2 text-light">
+              <a href="#work-experience" className="nav-link px-2 text-light">
                 Work Experience
               </a>
             </li>
