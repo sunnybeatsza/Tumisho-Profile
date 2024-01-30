@@ -5,6 +5,7 @@ import { AboutMe } from "./components/AboutMe/AboutMe";
 import { Services } from "./components/Services/Services";
 import { Portfolio } from "./components/Portfolio/Portfolio";
 import { WorkExp } from "./components/WorkExp/WorkExp";
+import { Footer } from "./components/Footer/Footer";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <Services />
       <Portfolio />
       <WorkExp />
+      <Footer />
     </div>
   );
 }

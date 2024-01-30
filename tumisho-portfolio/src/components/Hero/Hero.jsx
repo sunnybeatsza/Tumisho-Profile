@@ -1,12 +1,18 @@
 import React from "react";
+import ProfilePhoto from "../../Assets/Profile1.jpg";
+import CV from "../../Assets/Resume 2024.pdf";
 
 export const Hero = () => {
+  const openCV = () => {
+    window.open(CV);
+  };
+
   return (
     <div>
       <section id="profile">
         <div className="section__pic-container">
           <img
-            src="../Assets/images/Profile1.jpg"
+            src={ProfilePhoto}
             alt="John Doe profile picture"
             className="rounded-5"
           />
@@ -16,10 +22,7 @@ export const Hero = () => {
           <h1 className="title text-light">Mohube Tumisho Makgeru</h1>
           <p className="section__text__p2">Full-stack developer</p>
           <div className="btn-container">
-            <button
-              className="btn btn-primary"
-              onclick="window.open('../Assets/Resume 2023 - Copy.pdf')"
-            >
+            <button className="btn btn-primary" onClick={openCV}>
               Download CV
             </button>
             <button
