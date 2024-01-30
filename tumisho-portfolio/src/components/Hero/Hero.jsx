@@ -22,7 +22,7 @@ export const Hero = () => {
           <h1 className="title text-light">Mohube Tumisho Makgeru</h1>
           <p className="section__text__p2">Full-stack developer</p>
           <div className="btn-container">
-            <button className="btn btn-primary" onClick={openCV}>
+            <button className="btn btn-primary mx-2" onClick={openCV}>
               Download CV
             </button>
             <button
@@ -38,12 +38,14 @@ export const Hero = () => {
                 href="https://www.linkedin.com/in/mohube-tumisho-makgeru-742195214/"
                 target="_blank"
               >
-                <i className="bi bi-linkedin" />
+                <i className="bi bi-linkedin mx-1" />
+                LinkedIn
               </a>
             </button>
             <button className="btn btn-dark">
               <a href="https://github.com/sunnybeatsza" target="_blank">
-                <i className="bi bi-github" />
+                <i className="bi bi-github mx-1" />
+                Github
               </a>
             </button>
           </div>

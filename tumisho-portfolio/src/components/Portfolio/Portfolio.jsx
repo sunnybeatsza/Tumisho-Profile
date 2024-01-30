@@ -20,7 +20,7 @@ export const Portfolio = () => {
               >
                 <div className="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
                   <h3 className="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">
-                    Spotify Clone
+                    Muso.com
                   </h3>
                   <p className="text-light text-center">
                     CarFinder Pro is the ultimate app for conveniently locating
@@ -31,7 +31,7 @@ export const Portfolio = () => {
                     <li className="me-auto">
                       <button className="btn btn-dark rounded-pill">
                         <a
-                          href="https://github.com/sunnybeatsza"
+                          href="https://github.com/sunnybeatsza/ITunes-App"
                           target="_blank"
                         >
                           <i className="bi bi-github" />
@@ -60,7 +60,7 @@ export const Portfolio = () => {
               >
                 <div className="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
                   <h3 className="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">
-                    Authentic Bushmen
+                    To-do List
                   </h3>
                   <p className="text-light text-center">
                     WeatherNow is your go-to app for reliable weather forecasts
@@ -70,7 +70,7 @@ export const Portfolio = () => {
                     <li className="me-auto">
                       <button className="btn btn-dark rounded-pill">
                         <a
-                          href="https://github.com/sunnybeatsza"
+                          href="https://github.com/sunnybeatsza/TodoList"
                           target="_blank"
                         >
                           <i className="bi bi-github" />
@@ -99,7 +99,7 @@ export const Portfolio = () => {
               >
                 <div className="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
                   <h3 className="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">
-                    Game Stats
+                    Car Inventory
                   </h3>
                   <p className="text-light text-center">
                     The "Recipes" app is a handy tool for managing your meal
@@ -109,7 +109,7 @@ export const Portfolio = () => {
                     <li className="me-auto">
                       <button className="btn btn-dark rounded-pill">
                         <a
-                          href="https://github.com/sunnybeatsza/Recipe-App"
+                          href="https://github.com/sunnybeatsza/Car-Inventory"
                           target="_blank"
                         >
                           <i className="bi bi-github" />
@@ -139,7 +139,7 @@ export const Portfolio = () => {
               >
                 <div className="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
                   <h3 className="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">
-                    Events Za
+                    Weather App
                   </h3>
                   <p className="text-light text-center">
                     The "Recipes" app is a handy tool for managing your meal
@@ -149,7 +149,7 @@ export const Portfolio = () => {
                     <li className="me-auto">
                       <button className="btn btn-dark rounded-pill">
                         <a
-                          href="https://github.com/sunnybeatsza/Recipe-App"
+                          href="https://github.com/sunnybeatsza"
                           target="_blank"
                         >
                           <i className="bi bi-github" />
@@ -217,7 +217,7 @@ export const Portfolio = () => {
               >
                 <div className="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
                   <h3 className="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">
-                    Budegt Tracker
+                    Background Generator
                   </h3>
                   <p className="text-light text-center">
                     The "Recipes" app is a handy tool for managing your meal
@@ -227,7 +227,7 @@ export const Portfolio = () => {
                     <li className="me-auto">
                       <button className="btn btn-dark rounded-pill">
                         <a
-                          href="https://github.com/sunnybeatsza/Recipe-App"
+                          href="https://github.com/sunnybeatsza/Background-Generator"
                           target="_blank"
                         >
                           <i className="bi bi-github" />

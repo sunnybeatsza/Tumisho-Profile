@@ -11,17 +11,48 @@ export const WorkExp = () => {
             style={{ width: "18rem" }}
           >
             <div className="card-body">
-              <h5 className="card-title text-light">Mark</h5>
+              <h5 className="card-title text-light">
+                Administration Assistant
+              </h5>
               <h6 className="card-subtitle mb-2 text-light">
-                Glucode Executive
+                Lakefield Pharmacy <br />
+                Dec 2020 – Jan 2021 <br />
+                Benoni, Boksburg, South Africa
               </h6>
               <p className="card-text">
-                "Working with Tumisho has been an absolute game-changer for my
-                business. His MERN stack expertise turned my web application
-                idea into a stunning reality. The attention to detail in both
-                front-end and back-end development was impressive, and they
-                delivered on time. Thanks to his dedication, my online presence
-                is stronger than ever!"
+                <ul>
+                  <li>
+                    Efficiently managed incoming invoices by verifying and
+                    calculating final amounts, followed by meticulous
+                    organization through stapling and filing.
+                  </li>
+                  <li>
+                    My role also included taking record of stock that comes in
+                    and that goes out.
+                  </li>
+                  <li>
+                    Assumed responsibility for maintaining precise records of
+                    inventory, carefully tracking stock inflow and outflow to
+                    support optimal inventory management.
+                  </li>
+                  <li>
+                    Demonstrated versatility and adaptability by actively
+                    participating in various pharmacy departments, including the
+                    dispensary, administration, and retail units.
+                  </li>
+
+                  <li>
+                    Collaborated effectively within a team setting, fostering
+                    cooperation and synergy among team members to optimize
+                    performance.
+                  </li>
+
+                  <li>
+                    Exhibited proficiency in conflict resolution and management,
+                    ensuring the amicable resolution of customer concerns and
+                    disputes.
+                  </li>
+                </ul>
               </p>
             </div>
           </div>
@@ -30,17 +61,51 @@ export const WorkExp = () => {
             style={{ width: "18rem" }}
           >
             <div className="card-body">
-              <h5 className="card-title text-light">Jared</h5>
+              <h5 className="card-title text-light">Outsurance OSS</h5>
               <h6 className="card-subtitle mb-2 text-light">
-                Goldman Lead Engineer
+                Hastings Direct <br />
+                April 2021 – August 2022 <br />
+                Centurion, Pretoria, South Africa
+              </h6>
+              <h6 className="text-light">Renewals Advisor</h6>
+              <p className="card-text">
+                <ul>
+                  <li>
+                    Employed at Hastings Direct, a prominent UK-based insurance
+                    broker company, in the capacity of a Renewals Advisor from
+                    April 2021 to August 2022.
+                  </li>
+                  <li>
+                    Spearheaded customer retention efforts by proactively
+                    engaging with clients seeking to cancel the renewal of their
+                    insurance contracts.
+                  </li>
+                  <li>
+                    Demonstrated a track record of meeting and exceeding monthly
+                    targets, all within a high-pressure and fast-paced work
+                    environment.
+                  </li>
+                </ul>
+              </p>
+
+              <h6 className="text-light">
+                Customer service representative <br />
+                August 2022 - Present <br />
+                Centurion, South Africa
               </h6>
               <p className="card-text">
-                "I can't recommend Tumisho enough! His full-stack development
-                skills are unmatched. They transformed our outdated website into
-                a modern, responsive masterpiece. The seamless user experience
-                they created has boosted our customer engagement significantly.
-                If you're looking for top-tier web development, Tumisho is the
-                way to go!"
+                <ul>
+                  <li>
+                    Tasked with guiding customers through the process of making
+                    changes to their insurance policies and providing
+                    comprehensive education about their existing policies.
+                  </li>
+
+                  <li>
+                    Proficiently handling customer inquiries, offering expert
+                    assistance, and addressing their questions and concerns.
+                  </li>
+                </ul>
               </p>
             </div>
           </div>
@@ -49,17 +114,18 @@ export const WorkExp = () => {
             style={{ width: "18rem" }}
           >
             <div className="card-body">
-              <h5 className="card-title text-light">Tiffany</h5>
+              <h5 className="card-title text-light">
+                Freelancing <br />
+                Present <br />
+                Remote
+              </h5>
               <h6 className="card-subtitle mb-2 text-light">
-                Amazon Senior Engineer
+                Full Stack Developer
               </h6>
               <p className="card-text">
-                "From the initial consultation to the final product, Tumisho
-                exceeded my expectations. His proficiency with the MERN stack is
-                evident in every aspect of the project. The gradient background
-                he implemented made my website look sleek and professional. I'm
-                thrilled with the results, and my users love the user-friendly
-                design. Thank you, Tumisho, for your exceptional work!"
+                Currently freelancing with startup companies, providing
+                expertise in web development and contributing to various
+                projects.
               </p>
             </div>
           </div>
