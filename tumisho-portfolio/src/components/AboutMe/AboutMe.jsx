@@ -6,9 +6,8 @@ export const AboutMe = () => {
     <div>
       <div className="px-4 py-5 my-5 text-center moreMargin" id="About-me">
         <img src={Profile2} alt="" className="profile-photo" />
-        <h1 className="display-5 fw-bold text-body-emphasis">Centered hero</h1>
+        <h1 className="display-5 fw-bold text-body-emphasis">About me</h1>
         <div className="col-lg-6 mx-auto">
-          <p className="lead mb-3">About me</p>
           <p className="lead mb-3">Mohube Tumisho Makgeru</p>
           <p className="">
             I am a young, vibrant, and creative individual looking to break into

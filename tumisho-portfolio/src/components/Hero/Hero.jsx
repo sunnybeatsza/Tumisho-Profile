@@ -1,6 +1,6 @@
 import React from "react";
 import ProfilePhoto from "../../Assets/Profile1.jpg";
-import CV from "../../Assets/Resume 2024.pdf";
+import CV from "../../Assets/Resume 2024 December Update.pdf";
 
 export const Hero = () => {
   const openCV = () => {
