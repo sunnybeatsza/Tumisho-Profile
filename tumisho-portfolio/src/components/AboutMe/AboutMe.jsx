@@ -10,12 +10,11 @@ export const AboutMe = () => {
         <div className="col-lg-6 mx-auto">
           <p className="lead mb-3">Mohube Tumisho Makgeru</p>
           <p className="">
-            I am a young, vibrant, and creative individual looking to break into
-            the tech industry as a software developer. I'm currently looking to
-            venture into full stack or mobile development but eventually, I
-            would like to venture into game development and virtual reality. I
-            love gaming, music, and all things tech. I hope to be a great asset
-            to whichever organization I join.
+            I am a CompTIA Security+ certified professional with a strong foundation in cybersecurity, software development, and business operations. I’ve supported international clients through customer advisory roles focused on service delivery, renewals, documentation, and issue resolution , gaining strong analytical and communication skills. 
+
+            <br/>
+            <br/>
+            Technically, I’m proficient in Java, SQL, Git, GitHub, GitLab, Python, Linux, Docker and full stack tools including JavaScript, React, Node.js, Express.js and MongoDB. I also bring experience with Agile development, REST APIs, and version control platforms, enabling me to contribute to enablement, documentation, and system optimization.
           </p>
           <div className="d-grid gap-2 d-sm-flex justify-content-sm-center">
             <button type="button" className="btn btn-primary btn-lg px-4 gap-3">

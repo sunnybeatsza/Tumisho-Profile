@@ -119,13 +119,21 @@ export const WorkExp = () => {
                 Present <br />
                 Remote
               </h5>
-              <h6 className="card-subtitle mb-2 text-light">
-                Full Stack Developer
-              </h6>
+             <h6 className="text-light">Web developer</h6>
               <p className="card-text">
-                Currently freelancing with startup companies, providing
-                expertise in web development and contributing to various
-                projects.
+                <ul>
+                  <li>
+                  Designed and implemented the frontend UI using React for seamless user experience across
+                  service details, cocktail menus, and quote requests.
+                  </li>
+                  <li>
+                  Ensured the website was mobile-friendly, optimizing performance and accessibility
+                  </li>
+                  <li>
+                     Collaborated with the client to understand their vision and user needs, delivering an intuitive and visually appealing site.
+
+                  </li>
+                </ul>
               </p>
             </div>
           </div>

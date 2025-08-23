@@ -1,6 +1,6 @@
 import React from "react";
-import ProfilePhoto from "../../Assets/Profile1.jpg";
-import CV from "../../Assets/Resume 2024 December Update.pdf";
+import ProfilePhoto from "../../Assets/Suit-Photo_Cropped.JPG";
+import CV from "../../Assets/Resume_2025_July_Update.pdf";
 
 export const Hero = () => {
   const openCV = () => {
@@ -20,7 +20,8 @@ export const Hero = () => {
         <div className="section__text">
           <p className="section__text__p2">Hello, I'm</p>
           <h1 className="title text-light">Mohube Tumisho Makgeru</h1>
-          <p className="section__text__p2">Full-stack developer</p>
+          <p className="section__text__p2">Cybersecurity Consultant</p>
+          <p className="section__text__p2">Software engineer</p>
           <div className="btn-container">
             <button className="btn btn-primary mx-2" onClick={openCV}>
               Download CV
