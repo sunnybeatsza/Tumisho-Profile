@@ -1,105 +1,141 @@
 import React from "react";
-import MusicPhoto from "../../Assets/leo-wieling-bG8U3kaZltE-unsplash.jpg";
-import TodoListPhoto from "../../Assets/marissa-grootes-ck0i9Dnjtj0-unsplash.jpg";
-import CarInventoryPhoto from "../../Assets/josh-berquist-_4sWbzH5fp8-unsplash.jpg";
-import WeatherPhoto from "../../Assets/nika-benedictova-iQs9l_9ZSuM-unsplash.jpg";
-import RecipePhoto from "../../Assets/elizabeth-french-6Z9BQKksmbE-unsplash.jpg";
-import BackgroundPhoto from "../../Assets/luke-chesser-B_oL3jEt5L4-unsplash.jpg";
+
+const projects = [
+  {
+    number: "01",
+    title: "Reflector Agent",
+    type: "Agentic sprint operations system",
+    description:
+      "An autonomous Python agent designed to coordinate sprint ceremonies, verify code changes against ticket scope, update issue trackers, and keep teams informed through connected tools.",
+    stack: ["Python", "LLM routing", "Async APIs", "Human-in-the-loop"],
+    href: "https://github.com/sunnybeatsza/Reflector-Agent",
+    visual: "agent",
+  },
+  {
+    number: "02",
+    title: "PELO AudioWorks",
+    type: "Audio-focused digital experience",
+    description:
+      "A substantial product build centred on audio, translating a creative identity into a focused and engaging web experience.",
+    stack: ["Audio platform", "Web experience", "Product design"],
+    href: "https://github.com/sunnybeatsza/PELO-AudioWorks",
+    visual: "audio",
+  },
+  {
+    number: "03",
+    title: "XuriNet",
+    type: "Crime intelligence & safety platform",
+    description:
+      "A full-stack crime data analytics application that makes safety intelligence more accessible through risk mapping, Red Zone awareness, and real-time alert concepts for South African communities.",
+    stack: ["React 19", "TypeScript", "Python", "Tailwind CSS"],
+    href: "https://github.com/sunnybeatsza/XuriNet",
+    visual: "map",
+  },
+];
+
+const ProjectVisual = ({ project }) => {
+  if (project.visual === "agent") {
+    return (
+      <div className="project-visual project-visual-agent" aria-hidden="true">
+        <div className="visual-topline">
+          <span>Reflector / Agent</span>
+          <span className="live-indicator">Active</span>
+        </div>
+        <div className="agent-flow">
+          <span>01 · Understand</span>
+          <span>02 · Coordinate</span>
+          <span>03 · Verify</span>
+          <span>04 · Review</span>
+        </div>
+        <p>Human-approved automation for better sprints.</p>
+      </div>
+    );
+  }
+
+  if (project.visual === "audio") {
+    const bars = [34, 58, 82, 45, 72, 92, 62, 38, 78, 54, 88, 46, 68, 32, 74, 52];
+    return (
+      <div className="project-visual project-visual-audio" aria-hidden="true">
+        <div className="visual-topline">
+          <span>PELO / AudioWorks</span>
+          <span>Now playing</span>
+        </div>
+        <div className="waveform">
+          {bars.map((height, index) => (
+            <span key={index} style={{ "--bar-height": `${height}%` }} />
+          ))}
+        </div>
+        <div className="audio-progress">
+          <span>01:42</span>
+          <span>Creative sound, built for the web</span>
+          <span>03:18</span>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="project-visual project-visual-map" aria-hidden="true">
+      <div className="visual-topline">
+        <span>XuriNet / Safety intelligence</span>
+        <span>Gauteng · ZA</span>
+      </div>
+      <div className="map-grid">
+        <span className="risk-point risk-point-one" />
+        <span className="risk-point risk-point-two" />
+        <span className="risk-point risk-point-three" />
+        <p>Red Zone awareness</p>
+      </div>
+    </div>
+  );
+};
 
 export const Portfolio = () => {
   return (
-    <div>
-      <div id="Portfolio">
-        <div className="container px-4 py-5 moreMargin" id="custom-cards">
-          <h2 className="pb-2 border-bottom text-light">Portfolio</h2>
-          <div className="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
-            <div className="col">
-              <div
-                className="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
-                style={{
-                  background: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${MusicPhoto})`,
-                  backgroundSize: "cover",
-                  backgroundRepeat: "no-repeat",
-                  backgroundPosition: "center",
-                }}
-              >
-                <div className="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-                  <h3 className="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">
-                    Muso.com
-                  </h3>
-                  <p className="text-light text-center">
-                    Muso is a dynamic application that harnesses the power of
-                    Express, React, and Node.js, combined with the iTunes search
-                    API, to create a seamless and immersive music experience.
-                    This app is designed to be your ultimate music companion,
-                    offering a feature-rich platform that allows users to
-                    discover, explore, and enjoy their favorite tunes
-                    effortlessly.
-                  </p>
-                  <ul className="d-flex list-unstyled mt-auto">
-                    <li className="me-auto">
-                      <button className="btn btn-dark rounded-pill">
-                        <a
-                          href="https://github.com/sunnybeatsza/ITunes-App"
-                          target="_blank"
-                        >
-                          <i className="bi bi-github" />
-                        </a>
-                      </button>
-                    </li>
-                    <li className="d-flex align-items-center">
-                      <svg className="bi me-2" width="1em" height="1em">
-                        <use xlinkHref="#calendar3" />
-                      </svg>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div className="col">
-              <div
-                className="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
-                style={{
-                  background: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${TodoListPhoto})`,
-                  backgroundSize: "cover",
-                  backgroundRepeat: "no-repeat",
-                  backgroundPosition: "center",
-                }}
-              >
-                <div className="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-                  <h3 className="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">
-                    ReactToDo
-                  </h3>
-                  <p className="text-light text-center">
-                    ReactToDo is a dynamic and user-friendly To-Do List
-                    application built with React, designed to streamline your
-                    daily tasks and enhance your productivity. The app provides
-                    a clean and intuitive interface that allows users to easily
-                    add, edit, and mark tasks as complete.
-                  </p>
-                  <ul className="d-flex list-unstyled mt-auto">
-                    <li className="me-auto">
-                      <button className="btn btn-dark rounded-pill">
-                        <a
-                          href="https://github.com/sunnybeatsza/TodoList"
-                          target="_blank"
-                        >
-                          <i className="bi bi-github" />
-                        </a>
-                      </button>
-                    </li>
-                    <li className="d-flex align-items-center">
-                      <svg className="bi me-2" width="1em" height="1em">
-                        <use xlinkHref="#calendar3" />
-                      </svg>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
+    <section className="section section-shell work-section" id="work">
+      <div className="section-heading work-heading">
+        <div className="section-marker">
+          <span>03</span>
+          <p>Selected work</p>
+        </div>
+        <div>
+          <h2>Projects with purpose.</h2>
+          <p className="section-intro">
+            Three ambitious builds spanning agentic automation, audio, and
+            community safety technology.
+          </p>
         </div>
       </div>
-    </div>
+
+      <div className="project-list">
+        {projects.map((project) => (
+          <article className="project" key={project.title}>
+            <div className="project-media">
+              <ProjectVisual project={project} />
+              <span className="project-number">{project.number}</span>
+            </div>
+            <div className="project-info">
+              <p className="project-type">{project.type}</p>
+              <h3>{project.title}</h3>
+              <p className="project-description">{project.description}</p>
+              <ul className="tag-list" aria-label={`${project.title} technologies`}>
+                {project.stack.map((technology) => (
+                  <li key={technology}>{technology}</li>
+                ))}
+              </ul>
+              <a
+                className="project-link"
+                href={project.href}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={`View ${project.title} on GitHub`}
+              >
+                Explore project <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
   );
 };

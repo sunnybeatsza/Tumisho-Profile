@@ -2,31 +2,28 @@ import React from "react";
 
 export const Navbar = () => {
   return (
-    <div>
-      <header>
-        <nav>
-          <a href="index.html">
-            <h1 id="main-logo">MTM._</h1>
-          </a>
-          <ul id="nav-list">
-            <li>
-              <a href="index.html">Home</a>
-            </li>
-            <li>
-              <a href="#About-me">About</a>
-            </li>
-            <li>
-              <a href="#Services">Services</a>
-            </li>
-            <li>
-              <a href="#Portfolio">Portfolio</a>
-            </li>
-            <li>
-              <a href="contact.html">Contact</a>
-            </li>
-          </ul>
+    <header className="site-header">
+      <div className="nav-shell">
+        <a className="wordmark" href="#top" aria-label="Mohube Tumisho Makgeru — home">
+          MTM<span>/</span>
+        </a>
+
+        <nav className="nav-links" aria-label="Primary navigation">
+          <a href="#about">About</a>
+          <a href="#expertise">Expertise</a>
+          <a href="#work">Work</a>
+          <a href="#experience">Experience</a>
         </nav>
-      </header>
-    </div>
+
+        <a
+          className="nav-cta"
+          href="https://www.linkedin.com/in/tumisho-makgeru-742195214/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Let&apos;s connect <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </header>
   );
 };

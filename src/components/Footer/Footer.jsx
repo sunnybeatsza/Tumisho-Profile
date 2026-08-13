@@ -2,39 +2,41 @@ import React from "react";
 
 export const Footer = () => {
   return (
-    <div>
-      <div className="container moreMargin2">
-        <footer className="py-3 my-4">
-          <ul className="nav justify-content-center border-bottom pb-3 mb-3">
-            <li className="nav-item">
-              <a href="index.html" className="nav-link px-2 text-light">
-                Home
-              </a>
-            </li>
-            <li className="nav-item">
-              <a href="#About-me" className="nav-link px-2 text-light">
-                About me
-              </a>
-            </li>
-            <li className="nav-item">
-              <a href="#Services" className="nav-link px-2 text-light">
-                Services
-              </a>
-            </li>
-            <li className="nav-item">
-              <a href="#Portfolio" className="nav-link px-2 text-light">
-                Portfolio
-              </a>
-            </li>
-            <li className="nav-item">
-              <a href="#work-experience" className="nav-link px-2 text-light">
-                Work Experience
-              </a>
-            </li>
-          </ul>
-          <p className="text-center text-light-emphasis">© 2023 MTM._ Inc</p>
-        </footer>
+    <footer className="site-footer">
+      <div className="section-shell">
+        <div className="footer-cta">
+          <p className="eyebrow">Have a role or project in mind?</p>
+          <h2>Let&apos;s build something secure—and useful.</h2>
+          <a
+            className="button button-primary"
+            href="https://www.linkedin.com/in/tumisho-makgeru-742195214/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Start a conversation <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+
+        <div className="footer-bottom">
+          <a className="wordmark" href="#top" aria-label="Back to top">
+            MTM<span>/</span>
+          </a>
+          <p>© {new Date().getFullYear()} Mohube Tumisho Makgeru</p>
+          <div className="footer-links">
+            <a href="https://github.com/sunnybeatsza" target="_blank" rel="noreferrer">
+              GitHub
+            </a>
+            <a
+              href="https://www.linkedin.com/in/tumisho-makgeru-742195214/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              LinkedIn
+            </a>
+            <a href="#top">Back to top ↑</a>
+          </div>
+        </div>
       </div>
-    </div>
+    </footer>
   );
 };

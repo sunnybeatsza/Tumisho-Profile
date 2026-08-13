@@ -1,144 +1,93 @@
 import React from "react";
 
+const roles = [
+  {
+    period: "Mar 2026 — Present",
+    title: "Junior DevOps / Software Engineer",
+    company: "Mavuma Enterprise",
+    location: "Remote",
+    description:
+      "Provision server infrastructure with Ansible, automate operations with Python and Bash, and manage secrets securely. Built a React and FastAPI customer support dashboard, performed pre-launch penetration testing, and validated releases through unit testing.",
+    skills: ["Ansible", "Python", "FastAPI", "Security testing"],
+  },
+  {
+    period: "Nov 2025 — Feb 2026",
+    title: "Intern Software Developer",
+    company: "Adakin Digital",
+    location: "Remote",
+    description:
+      "Developed backend software and architecture with JavaScript, TypeScript, Prisma ORM, and PostgreSQL. Supported data-pipeline work and participated in Agile planning through Azure DevOps.",
+    skills: ["TypeScript", "PostgreSQL", "Prisma ORM", "Azure DevOps"],
+  },
+  {
+    period: "Sep 2025 — Dec 2025",
+    title: "Technical Mentor",
+    company: "WeThinkCode_",
+    location: "Rosebank, South Africa",
+    description:
+      "Led workshops, guided students through technical problems, and encouraged collaborative software development during the programme's first phase.",
+    skills: ["Mentoring", "Workshops", "Problem solving"],
+  },
+  {
+    period: "Aug 2022 — Jul 2024",
+    title: "Customer Service Advisor",
+    company: "OUTsurance (OSS) · Hastings Direct",
+    location: "Remote · UK-based",
+    description:
+      "Supported customers with policy enquiries, renewals, claims processing, and general service for a major UK insurance broker.",
+    skills: ["Customer service", "Claims support", "Policy servicing"],
+  },
+  {
+    period: "Apr 2021 — Jul 2022",
+    title: "Renewals Advisor",
+    company: "OUTsurance (OSS) · Hastings Direct",
+    location: "Remote · UK-based",
+    description:
+      "Managed insurance renewals and negotiations, offering tailored options that supported smooth transitions and customer retention.",
+    skills: ["Renewals", "Negotiation", "Retention"],
+  },
+];
+
 export const WorkExp = () => {
   return (
-    <div id="work-experience">
-      <>
-        <h2 className="text-center text-light">Work experience</h2>
-        <div className="d-flex justify-content-center">
-          <div
-            className="card mx-3 bg-black border border-white"
-            style={{ width: "18rem" }}
-          >
-            <div className="card-body">
-              <h5 className="card-title text-light">
-                Administration Assistant
-              </h5>
-              <h6 className="card-subtitle mb-2 text-light">
-                Lakefield Pharmacy <br />
-                Dec 2020 – Jan 2021 <br />
-                Benoni, Boksburg, South Africa
-              </h6>
-              <p className="card-text">
-                <ul>
-                  <li>
-                    Efficiently managed incoming invoices by verifying and
-                    calculating final amounts, followed by meticulous
-                    organization through stapling and filing.
-                  </li>
-                  <li>
-                    My role also included taking record of stock that comes in
-                    and that goes out.
-                  </li>
-                  <li>
-                    Assumed responsibility for maintaining precise records of
-                    inventory, carefully tracking stock inflow and outflow to
-                    support optimal inventory management.
-                  </li>
-                  <li>
-                    Demonstrated versatility and adaptability by actively
-                    participating in various pharmacy departments, including the
-                    dispensary, administration, and retail units.
-                  </li>
-
-                  <li>
-                    Collaborated effectively within a team setting, fostering
-                    cooperation and synergy among team members to optimize
-                    performance.
-                  </li>
-
-                  <li>
-                    Exhibited proficiency in conflict resolution and management,
-                    ensuring the amicable resolution of customer concerns and
-                    disputes.
-                  </li>
-                </ul>
-              </p>
-            </div>
-          </div>
-          <div
-            className="card mx-3 bg-black border border-white"
-            style={{ width: "18rem" }}
-          >
-            <div className="card-body">
-              <h5 className="card-title text-light">Outsurance OSS</h5>
-              <h6 className="card-subtitle mb-2 text-light">
-                Hastings Direct <br />
-                April 2021 – August 2022 <br />
-                Centurion, Pretoria, South Africa
-              </h6>
-              <h6 className="text-light">Renewals Advisor</h6>
-              <p className="card-text">
-                <ul>
-                  <li>
-                    Employed at Hastings Direct, a prominent UK-based insurance
-                    broker company, in the capacity of a Renewals Advisor from
-                    April 2021 to August 2022.
-                  </li>
-                  <li>
-                    Spearheaded customer retention efforts by proactively
-                    engaging with clients seeking to cancel the renewal of their
-                    insurance contracts.
-                  </li>
-                  <li>
-                    Demonstrated a track record of meeting and exceeding monthly
-                    targets, all within a high-pressure and fast-paced work
-                    environment.
-                  </li>
-                </ul>
-              </p>
-
-              <h6 className="text-light">
-                Customer service representative <br />
-                August 2022 - Present <br />
-                Centurion, South Africa
-              </h6>
-              <p className="card-text">
-                <ul>
-                  <li>
-                    Tasked with guiding customers through the process of making
-                    changes to their insurance policies and providing
-                    comprehensive education about their existing policies.
-                  </li>
-
-                  <li>
-                    Proficiently handling customer inquiries, offering expert
-                    assistance, and addressing their questions and concerns.
-                  </li>
-                </ul>
-              </p>
-            </div>
-          </div>
-          <div
-            className="card mx-3 bg-black border border-white"
-            style={{ width: "18rem" }}
-          >
-            <div className="card-body">
-              <h5 className="card-title text-light">
-                Freelancing <br />
-                Present <br />
-                Remote
-              </h5>
-             <h6 className="text-light">Web developer</h6>
-              <p className="card-text">
-                <ul>
-                  <li>
-                  Designed and implemented the frontend UI using React for seamless user experience across
-                  service details, cocktail menus, and quote requests.
-                  </li>
-                  <li>
-                  Ensured the website was mobile-friendly, optimizing performance and accessibility
-                  </li>
-                  <li>
-                     Collaborated with the client to understand their vision and user needs, delivering an intuitive and visually appealing site.
-
-                  </li>
-                </ul>
-              </p>
-            </div>
-          </div>
+    <section className="section section-shell experience-section" id="experience">
+      <div className="section-heading">
+        <div className="section-marker">
+          <span>04</span>
+          <p>Experience</p>
         </div>
-      </>
-    </div>
+        <div>
+          <h2>Building at the intersection of security and software.</h2>
+          <p className="section-intro">
+            Hands-on engineering experience supported by a strong foundation
+            in mentorship, customer service, and clear communication.
+          </p>
+        </div>
+      </div>
+
+      <div className="timeline">
+        {roles.map((role, index) => (
+          <article className="timeline-item" key={`${role.title}-${role.period}`}>
+            <div className="timeline-description-side">
+              <p className="timeline-description">{role.description}</p>
+              <ul className="timeline-skills" aria-label={`${role.title} skills`}>
+                {role.skills.map((skill) => (
+                  <li key={skill}>{skill}</li>
+                ))}
+              </ul>
+            </div>
+            <div className="timeline-axis" aria-hidden="true">
+              <span>{String(index + 1).padStart(2, "0")}</span>
+            </div>
+            <div className="timeline-role">
+              <p className="timeline-period">{role.period}</p>
+              <h3>{role.title}</h3>
+              <p>{role.company}</p>
+              <p className="timeline-location">{role.location}</p>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
   );
 };

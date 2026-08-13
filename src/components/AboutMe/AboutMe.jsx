@@ -1,28 +1,58 @@
 import React from "react";
-import Profile2 from "../../Assets/Profile4.jpg";
+
+const capabilities = [
+  "Threat & risk analysis",
+  "Full-stack development",
+  "Secure authentication",
+  "Technical documentation",
+  "API development",
+  "Client enablement",
+];
 
 export const AboutMe = () => {
   return (
-    <div>
-      <div className="px-4 py-5 my-5 text-center moreMargin" id="About-me">
-        <img src={Profile2} alt="" className="profile-photo" />
-        <h1 className="display-5 fw-bold text-body-emphasis">About me</h1>
-        <div className="col-lg-6 mx-auto">
-          <p className="lead mb-3">Mohube Tumisho Makgeru</p>
-          <p className="">
-            I am a CompTIA Security+ certified professional with a strong foundation in cybersecurity, software development, and business operations. I’ve supported international clients through customer advisory roles focused on service delivery, renewals, documentation, and issue resolution , gaining strong analytical and communication skills. 
+    <section className="section section-shell about-section" id="about">
+      <div className="section-marker">
+        <span>01</span>
+        <p>About</p>
+      </div>
 
-            <br/>
-            <br/>
-            Technically, I’m proficient in Java, SQL, Git, GitHub, GitLab, Python, Linux, Docker and full stack tools including JavaScript, React, Node.js, Express.js and MongoDB. I also bring experience with Agile development, REST APIs, and version control platforms, enabling me to contribute to enablement, documentation, and system optimization.
+      <div className="about-content">
+        <h2>
+          Technical depth,
+          <br />
+          <span>clear communication.</span>
+        </h2>
+
+        <div className="about-grid">
+          <p className="about-lead">
+            I bring together cybersecurity thinking, software development, and
+            business operations to solve practical problems—not just technical
+            ones.
           </p>
-          <div className="d-grid gap-2 d-sm-flex justify-content-sm-center">
-            <button type="button" className="btn btn-primary btn-lg px-4 gap-3">
-              Learn More
-            </button>
+          <div className="about-detail">
+            <p>
+              My experience supporting international clients has sharpened my
+              approach to service delivery, renewals, documentation, and issue
+              resolution. I pair that client perspective with hands-on work in
+              Java, Python, JavaScript, React, Node.js, SQL, Linux, and Docker.
+            </p>
+            <p>
+              The result is a balanced approach: understand the risk, explain
+              it clearly, and build a solution people can actually use.
+            </p>
           </div>
         </div>
+
+        <div className="capability-list" aria-label="Core capabilities">
+          {capabilities.map((capability, index) => (
+            <div className="capability-item" key={capability}>
+              <span>{String(index + 1).padStart(2, "0")}</span>
+              <p>{capability}</p>
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
