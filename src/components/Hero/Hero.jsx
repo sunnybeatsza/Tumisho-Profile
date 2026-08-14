@@ -7,12 +7,9 @@ export const Hero = () => {
     <main id="top">
       <section className="hero section-shell" aria-labelledby="hero-title">
         <div className="hero-copy">
-          <div className="availability">
-            <span className="status-dot" aria-hidden="true" />
-            Open to meaningful opportunities
-          </div>
-
-          <p className="eyebrow">Cybersecurity consultant · Software engineer</p>
+          <p className="eyebrow">
+            Cybersecurity consultant · Software engineer
+          </p>
           <h1 id="hero-title">
             Securing systems.
             <br />
@@ -26,7 +23,7 @@ export const Hero = () => {
 
           <div className="hero-actions">
             <a className="button button-primary" href={CV} download>
-              Download résumé <span aria-hidden="true">↓</span>
+              Download resume <span aria-hidden="true">↓</span>
             </a>
             <a className="text-link" href="#work">
               View selected work <span aria-hidden="true">↘</span>
@@ -39,14 +36,24 @@ export const Hero = () => {
               target="_blank"
               rel="noreferrer"
             >
-              GitHub <span aria-hidden="true">↗</span>
+              <i className="bi bi-github" aria-hidden="true" />
+              <span className="social-label">
+                <strong>GitHub</strong>
+                <small>@sunnybeatsza</small>
+              </span>
+              <span className="social-arrow" aria-hidden="true">↗</span>
             </a>
             <a
               href="https://www.linkedin.com/in/tumisho-makgeru-742195214/"
               target="_blank"
               rel="noreferrer"
             >
-              LinkedIn <span aria-hidden="true">↗</span>
+              <i className="bi bi-linkedin" aria-hidden="true" />
+              <span className="social-label">
+                <strong>LinkedIn</strong>
+                <small>Professional profile</small>
+              </span>
+              <span className="social-arrow" aria-hidden="true">↗</span>
             </a>
           </div>
         </div>

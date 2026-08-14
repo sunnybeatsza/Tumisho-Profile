@@ -24,6 +24,23 @@ const services = [
   },
 ];
 
+const technologies = [
+  { name: "Penetration testing", icon: "bi-shield-exclamation" },
+  { name: "IAM", icon: "bi-fingerprint" },
+  { name: "Nmap", icon: "bi-broadcast-pin" },
+  { name: "Nikto", icon: "bi-search" },
+  { name: "Kali Linux", logo: `${process.env.PUBLIC_URL}/tech-icons/kali.svg` },
+  { name: "React", logo: `${process.env.PUBLIC_URL}/tech-icons/react.svg` },
+  { name: "Node.js", logo: `${process.env.PUBLIC_URL}/tech-icons/nodejs.svg` },
+  { name: "Java", logo: `${process.env.PUBLIC_URL}/tech-icons/java.svg` },
+  { name: "Python", logo: `${process.env.PUBLIC_URL}/tech-icons/python.svg` },
+  { name: "REST APIs", icon: "bi-globe2" },
+  { name: "Ansible", logo: `${process.env.PUBLIC_URL}/tech-icons/ansible.svg` },
+  { name: "HashiCorp Vault", logo: `${process.env.PUBLIC_URL}/tech-icons/vault.svg` },
+  { name: "Docker", logo: `${process.env.PUBLIC_URL}/tech-icons/docker.svg` },
+  { name: "Bash", logo: `${process.env.PUBLIC_URL}/tech-icons/bash.svg` },
+];
+
 export const Services = () => {
   return (
     <section className="section section-shell expertise-section" id="expertise">
@@ -79,6 +96,27 @@ export const Services = () => {
             </ul>
           </article>
         ))}
+      </div>
+
+      <div className="technology-showcase">
+        <div className="technology-heading">
+          <p>Technologies &amp; tools</p>
+          <h3>The stack behind the work.</h3>
+        </div>
+        <ul className="technology-grid" aria-label="Technologies and tools">
+          {technologies.map((technology) => (
+            <li key={technology.name}>
+              <span className="technology-icon" aria-hidden="true">
+                {technology.logo ? (
+                  <img src={technology.logo} alt="" className="technology-logo" />
+                ) : (
+                  <i className={`bi ${technology.icon}`} />
+                )}
+              </span>
+              <span>{technology.name}</span>
+            </li>
+          ))}
+        </ul>
       </div>
 
     </section>
