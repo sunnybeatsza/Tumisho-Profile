@@ -12,19 +12,23 @@ const capabilities = [
 export const AboutMe = () => {
   return (
     <section className="section section-shell about-section" id="about">
-      <div className="section-marker">
+      <div className="section-marker" data-reveal="up">
         <span>01</span>
         <p>About</p>
       </div>
 
       <div className="about-content">
-        <h2>
+        <h2 data-reveal="up" style={{ "--reveal-delay": "70ms" }}>
           Technical depth,
           <br />
           <span>clear communication.</span>
         </h2>
 
-        <div className="about-grid">
+        <div
+          className="about-grid"
+          data-reveal="up"
+          style={{ "--reveal-delay": "120ms" }}
+        >
           <p className="about-lead">
             I bring together cybersecurity thinking, software development, and
             business operations to solve practical problems—not just technical
@@ -46,7 +50,12 @@ export const AboutMe = () => {
 
         <div className="capability-list" aria-label="Core capabilities">
           {capabilities.map((capability, index) => (
-            <div className="capability-item" key={capability}>
+            <div
+              className="capability-item"
+              key={capability}
+              data-reveal="up"
+              style={{ "--reveal-delay": `${(index % 2) * 65}ms` }}
+            >
               <span>{String(index + 1).padStart(2, "0")}</span>
               <p>{capability}</p>
             </div>

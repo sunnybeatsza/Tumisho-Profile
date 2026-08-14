@@ -52,11 +52,11 @@ export const WorkExp = () => {
   return (
     <section className="section section-shell experience-section" id="experience">
       <div className="section-heading">
-        <div className="section-marker">
+        <div className="section-marker" data-reveal="up">
           <span>04</span>
           <p>Experience</p>
         </div>
-        <div>
+        <div data-reveal="up" style={{ "--reveal-delay": "70ms" }}>
           <h2>Building at the intersection of security and software.</h2>
           <p className="section-intro">
             Hands-on engineering experience supported by a strong foundation
@@ -67,7 +67,11 @@ export const WorkExp = () => {
 
       <div className="timeline">
         {roles.map((role, index) => (
-          <article className="timeline-item" key={`${role.title}-${role.period}`}>
+          <article
+            className="timeline-item"
+            key={`${role.title}-${role.period}`}
+            data-timeline-item
+          >
             <div className="timeline-description-side">
               <p className="timeline-description">{role.description}</p>
               <ul className="timeline-skills" aria-label={`${role.title} skills`}>
@@ -77,7 +81,10 @@ export const WorkExp = () => {
               </ul>
             </div>
             <div className="timeline-axis" aria-hidden="true">
-              <span>{String(index + 1).padStart(2, "0")}</span>
+              <span className="timeline-line" />
+              <span className="timeline-marker">
+                {String(index + 1).padStart(2, "0")}
+              </span>
             </div>
             <div className="timeline-role">
               <p className="timeline-period">{role.period}</p>

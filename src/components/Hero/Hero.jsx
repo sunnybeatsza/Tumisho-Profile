@@ -7,21 +7,33 @@ export const Hero = () => {
     <main id="top">
       <section className="hero section-shell" aria-labelledby="hero-title">
         <div className="hero-copy">
-          <p className="eyebrow">
+          <p className="eyebrow" data-reveal="up">
             Cybersecurity consultant · Software engineer
           </p>
-          <h1 id="hero-title">
+          <h1
+            id="hero-title"
+            data-reveal="up"
+            style={{ "--reveal-delay": "70ms" }}
+          >
             Securing systems.
             <br />
             <span>Building better ones.</span>
           </h1>
-          <p className="hero-intro">
+          <p
+            className="hero-intro"
+            data-reveal="up"
+            style={{ "--reveal-delay": "140ms" }}
+          >
             I&apos;m Mohube Tumisho Makgeru, a Security+ certified engineer
             working across cybersecurity, DevOps, full-stack engineering, and
             infrastructure automation.
           </p>
 
-          <div className="hero-actions">
+          <div
+            className="hero-actions"
+            data-reveal="up"
+            style={{ "--reveal-delay": "210ms" }}
+          >
             <a className="button button-primary" href={CV} download>
               Download resume <span aria-hidden="true">↓</span>
             </a>
@@ -30,7 +42,12 @@ export const Hero = () => {
             </a>
           </div>
 
-          <div className="hero-socials" aria-label="Social links">
+          <div
+            className="hero-socials"
+            aria-label="Social links"
+            data-reveal="up"
+            style={{ "--reveal-delay": "280ms" }}
+          >
             <a
               href="https://github.com/sunnybeatsza"
               target="_blank"

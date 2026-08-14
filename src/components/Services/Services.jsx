@@ -32,8 +32,14 @@ const technologies = [
   { name: "Kali Linux", logo: `${process.env.PUBLIC_URL}/tech-icons/kali.svg` },
   { name: "React", logo: `${process.env.PUBLIC_URL}/tech-icons/react.svg` },
   { name: "Node.js", logo: `${process.env.PUBLIC_URL}/tech-icons/nodejs.svg` },
+  { name: "JavaScript", logo: `${process.env.PUBLIC_URL}/tech-icons/javascript.svg` },
+  { name: "TypeScript", logo: `${process.env.PUBLIC_URL}/tech-icons/typescript.svg` },
   { name: "Java", logo: `${process.env.PUBLIC_URL}/tech-icons/java.svg` },
+  { name: "Maven", logo: `${process.env.PUBLIC_URL}/tech-icons/maven.svg` },
+  { name: "JUnit 5", logo: `${process.env.PUBLIC_URL}/tech-icons/junit5.svg` },
   { name: "Python", logo: `${process.env.PUBLIC_URL}/tech-icons/python.svg` },
+  { name: "PostgreSQL", logo: `${process.env.PUBLIC_URL}/tech-icons/postgresql.svg` },
+  { name: "Prisma", logo: `${process.env.PUBLIC_URL}/tech-icons/prisma.svg` },
   { name: "REST APIs", icon: "bi-globe2" },
   { name: "Ansible", logo: `${process.env.PUBLIC_URL}/tech-icons/ansible.svg` },
   { name: "HashiCorp Vault", logo: `${process.env.PUBLIC_URL}/tech-icons/vault.svg` },
@@ -45,11 +51,11 @@ export const Services = () => {
   return (
     <section className="section section-shell expertise-section" id="expertise">
       <div className="section-heading">
-        <div className="section-marker">
+        <div className="section-marker" data-reveal="up">
           <span>02</span>
           <p>Expertise</p>
         </div>
-        <div>
+        <div data-reveal="up" style={{ "--reveal-delay": "70ms" }}>
           <h2>Where I add value.</h2>
           <p className="section-intro">
             A focused skill set spanning secure systems, software delivery, and
@@ -58,13 +64,17 @@ export const Services = () => {
         </div>
       </div>
 
-      <article className="credential-feature">
+      <article className="credential-feature" data-credential-reveal>
         <div className="credential-label">
           <span className="credential-mark" aria-hidden="true">✓</span>
           <p>Industry certification</p>
         </div>
         <div className="credential-title">
-          <p>CompTIA</p>
+          <img
+            className="comptia-logo"
+            src={`${process.env.PUBLIC_URL}/tech-icons/comptia.svg`}
+            alt="CompTIA"
+          />
           <h3>Security<span>+</span></h3>
         </div>
         <div className="credential-copy">
@@ -84,8 +94,13 @@ export const Services = () => {
       </article>
 
       <div className="service-grid">
-        {services.map((service) => (
-          <article className="service-card" key={service.title}>
+        {services.map((service, index) => (
+          <article
+            className="service-card"
+            key={service.title}
+            data-reveal="up"
+            style={{ "--reveal-delay": `${index * 80}ms` }}
+          >
             <span className="card-number">{service.number}</span>
             <h3>{service.title}</h3>
             <p>{service.description}</p>
@@ -99,13 +114,17 @@ export const Services = () => {
       </div>
 
       <div className="technology-showcase">
-        <div className="technology-heading">
+        <div className="technology-heading" data-reveal="up">
           <p>Technologies &amp; tools</p>
           <h3>The stack behind the work.</h3>
         </div>
         <ul className="technology-grid" aria-label="Technologies and tools">
-          {technologies.map((technology) => (
-            <li key={technology.name}>
+          {technologies.map((technology, index) => (
+            <li
+              key={technology.name}
+              data-reveal="up"
+              style={{ "--reveal-delay": `${(index % 4) * 55}ms` }}
+            >
               <span className="technology-icon" aria-hidden="true">
                 {technology.logo ? (
                   <img src={technology.logo} alt="" className="technology-logo" />

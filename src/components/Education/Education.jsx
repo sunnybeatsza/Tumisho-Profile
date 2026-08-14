@@ -52,11 +52,11 @@ export const Education = () => {
   return (
     <section className="section section-shell education-section" id="education">
       <div className="section-heading">
-        <div className="section-marker">
+        <div className="section-marker" data-reveal="up">
           <span>05</span>
           <p>Education</p>
         </div>
-        <div>
+        <div data-reveal="up" style={{ "--reveal-delay": "70ms" }}>
           <h2>Learning that became practice.</h2>
           <p className="section-intro">
             Formal software engineering education supported by intensive,
@@ -67,7 +67,11 @@ export const Education = () => {
 
       <div className="education-list">
         {education.map((item) => (
-          <article className="education-item" key={item.institution}>
+          <article
+            className="education-item"
+            key={item.institution}
+            data-reveal="up"
+          >
             <span className="education-number">{item.number}</span>
             <div className="education-title">
               <p>{item.institution}</p>

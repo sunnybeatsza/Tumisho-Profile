@@ -94,11 +94,11 @@ export const Portfolio = () => {
   return (
     <section className="section section-shell work-section" id="work">
       <div className="section-heading work-heading">
-        <div className="section-marker">
+        <div className="section-marker" data-reveal="up">
           <span>03</span>
           <p>Selected work</p>
         </div>
-        <div>
+        <div data-reveal="up" style={{ "--reveal-delay": "70ms" }}>
           <h2>Projects with purpose.</h2>
           <p className="section-intro">
             Three ambitious builds spanning agentic automation, audio, and
@@ -109,7 +109,7 @@ export const Portfolio = () => {
 
       <div className="project-list">
         {projects.map((project) => (
-          <article className="project" key={project.title}>
+          <article className="project" key={project.title} data-reveal="up">
             <div className="project-media">
               <ProjectVisual project={project} />
               <span className="project-number">{project.number}</span>

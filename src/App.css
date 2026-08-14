@@ -485,12 +485,15 @@ button:focus-visible {
 }
 
 .credential-feature {
+  position: relative;
+  isolation: isolate;
   display: grid;
   grid-template-columns: 0.7fr 1.3fr 1fr;
   gap: clamp(30px, 5vw, 72px);
   align-items: end;
   margin-top: 72px;
   padding: clamp(34px, 5vw, 64px);
+  overflow: hidden;
   background: var(--accent);
   color: var(--accent-ink);
 }
@@ -513,12 +516,10 @@ button:focus-visible {
   text-transform: uppercase;
 }
 
-.credential-title > p {
-  margin-bottom: -6px;
-  color: #333333;
-  font-size: clamp(1.1rem, 2vw, 1.55rem);
-  font-weight: 700;
-  letter-spacing: -0.03em;
+.comptia-logo {
+  width: clamp(112px, 12vw, 160px);
+  height: auto;
+  margin-bottom: 16px;
 }
 
 .credential-title h3 {
@@ -1012,17 +1013,17 @@ button:focus-visible {
   place-items: center;
 }
 
-.timeline-axis::before {
+.timeline-line {
   position: absolute;
   top: 0;
   bottom: 0;
   left: 50%;
   width: 1px;
   background: var(--line);
-  content: "";
+  transform-origin: top;
 }
 
-.timeline-axis span {
+.timeline-marker {
   position: relative;
   z-index: 1;
   display: grid;
@@ -1035,6 +1036,7 @@ button:focus-visible {
   color: var(--accent);
   font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   font-size: 0.76rem;
+  transition: background 320ms ease, color 320ms ease;
 }
 
 .timeline-description-side {
@@ -1094,12 +1096,23 @@ button:focus-visible {
 }
 
 .education-item {
+  position: relative;
   display: grid;
   grid-template-columns: 0.35fr 1.15fr 1.5fr;
   gap: clamp(28px, 5vw, 72px);
   align-items: start;
   padding-block: 42px;
-  border-bottom: 1px solid var(--line);
+}
+
+.education-item::after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  background: var(--line);
+  content: "";
+  transform-origin: left;
 }
 
 .education-number {
@@ -1189,6 +1202,14 @@ button:focus-visible {
   background: #232323;
 }
 
+.footer-cta .button span {
+  transition: transform 220ms ease;
+}
+
+.footer-cta .button:hover span {
+  transform: translate(3px, -3px);
+}
+
 .footer-bottom {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
@@ -1217,6 +1238,154 @@ button:focus-visible {
 
 .footer-links a {
   color: #292929;
+}
+
+@keyframes hero-enter {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.hero [data-reveal] {
+  animation: hero-enter 700ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: var(--reveal-delay, 0ms);
+}
+
+/* Motion is progressively enabled by App.js after visible content is marked. */
+html.motion-ready [data-reveal] {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 650ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 650ms cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+html.motion-ready [data-reveal="left"] {
+  transform: translateX(-22px);
+}
+
+html.motion-ready [data-reveal="right"] {
+  transform: translateX(22px);
+}
+
+html.motion-ready [data-reveal].is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+html.motion-ready .hero [data-reveal] {
+  transition: none;
+}
+
+html.motion-ready .technology-grid li[data-reveal].is-visible:hover {
+  transform: translateY(-2px);
+}
+
+html.motion-ready .credential-feature[data-credential-reveal]::after {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  background: var(--bg);
+  content: "";
+  transform: scaleX(1);
+  transform-origin: right;
+  transition: transform 800ms cubic-bezier(0.77, 0, 0.18, 1);
+}
+
+html.motion-ready .credential-feature[data-credential-reveal].is-visible::after {
+  transform: scaleX(0);
+}
+
+html.motion-ready .credential-feature[data-credential-reveal] .credential-label,
+html.motion-ready .credential-feature[data-credential-reveal] .credential-title,
+html.motion-ready .credential-feature[data-credential-reveal] .credential-copy {
+  opacity: 0;
+  transform: translateY(14px);
+  transition:
+    opacity 520ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 520ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+html.motion-ready .credential-feature[data-credential-reveal].is-visible .credential-label,
+html.motion-ready .credential-feature[data-credential-reveal].is-visible .credential-title,
+html.motion-ready .credential-feature[data-credential-reveal].is-visible .credential-copy {
+  opacity: 1;
+  transform: none;
+}
+
+html.motion-ready .credential-feature[data-credential-reveal].is-visible .credential-label {
+  transition-delay: 180ms;
+}
+
+html.motion-ready .credential-feature[data-credential-reveal].is-visible .credential-title {
+  transition-delay: 280ms;
+}
+
+html.motion-ready .credential-feature[data-credential-reveal].is-visible .credential-copy {
+  transition-delay: 380ms;
+}
+
+html.motion-ready [data-timeline-item] .timeline-line {
+  transform: scaleY(0);
+  transition: transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+html.motion-ready [data-timeline-item] .timeline-description-side,
+html.motion-ready [data-timeline-item] .timeline-role {
+  opacity: 0;
+  transition:
+    opacity 620ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 620ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+html.motion-ready [data-timeline-item]:nth-child(odd) .timeline-description-side,
+html.motion-ready [data-timeline-item]:nth-child(even) .timeline-role {
+  transform: translateX(-24px);
+}
+
+html.motion-ready [data-timeline-item]:nth-child(odd) .timeline-role,
+html.motion-ready [data-timeline-item]:nth-child(even) .timeline-description-side {
+  transform: translateX(24px);
+}
+
+html.motion-ready [data-timeline-item].is-visible .timeline-line {
+  transform: scaleY(1);
+}
+
+html.motion-ready [data-timeline-item].is-visible .timeline-marker {
+  background: var(--accent);
+  color: var(--accent-ink);
+  transition-delay: 180ms;
+}
+
+html.motion-ready [data-timeline-item].is-visible .timeline-description-side,
+html.motion-ready [data-timeline-item].is-visible .timeline-role {
+  opacity: 1;
+  transform: none;
+}
+
+html.motion-ready [data-timeline-item].is-visible .timeline-description-side {
+  transition-delay: 130ms;
+}
+
+html.motion-ready [data-timeline-item].is-visible .timeline-role {
+  transition-delay: 210ms;
+}
+
+html.motion-ready .education-item[data-reveal]::after {
+  transform: scaleX(0);
+  transition: transform 760ms cubic-bezier(0.22, 1, 0.36, 1) 140ms;
+}
+
+html.motion-ready .education-item[data-reveal].is-visible::after {
+  transform: scaleX(1);
 }
 
 @media (max-width: 980px) {
@@ -1447,11 +1616,11 @@ button:focus-visible {
     width: 20px;
   }
 
-  .timeline-axis::before {
+  .timeline-line {
     left: 9px;
   }
 
-  .timeline-axis span {
+  .timeline-marker {
     position: absolute;
     top: 42px;
     left: 0;
@@ -1459,6 +1628,16 @@ button:focus-visible {
     height: 20px;
     overflow: hidden;
     color: transparent;
+  }
+
+  html.motion-ready [data-timeline-item]:nth-child(n) .timeline-description-side,
+  html.motion-ready [data-timeline-item]:nth-child(n) .timeline-role {
+    transform: translateY(18px);
+  }
+
+  html.motion-ready [data-timeline-item].is-visible .timeline-description-side,
+  html.motion-ready [data-timeline-item].is-visible .timeline-role {
+    transform: none;
   }
 
   .timeline-role,
@@ -1511,6 +1690,24 @@ button:focus-visible {
   *,
   *::before,
   *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+  }
+
+  [data-reveal],
+  [data-timeline-item] .timeline-description-side,
+  [data-timeline-item] .timeline-role,
+  [data-timeline-item] .timeline-line,
+  [data-credential-reveal] .credential-label,
+  [data-credential-reveal] .credential-title,
+  [data-credential-reveal] .credential-copy,
+  .education-item::after {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .credential-feature[data-credential-reveal]::after {
+    display: none !important;
   }
 }
