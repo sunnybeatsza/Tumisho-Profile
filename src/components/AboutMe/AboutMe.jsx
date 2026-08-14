@@ -31,7 +31,7 @@ export const AboutMe = () => {
         >
           <p className="about-lead">
             I bring together cybersecurity thinking, software development, and
-            business operations to solve practical problems—not just technical
+            business operations to solve practical problems, not just technical
             ones.
           </p>
           <div className="about-detail">
@@ -42,8 +42,8 @@ export const AboutMe = () => {
               Java, Python, JavaScript, React, Node.js, SQL, Linux, and Docker.
             </p>
             <p>
-              The result is a balanced approach: understand the risk, explain
-              it clearly, and build a solution people can actually use.
+              The result is a balanced approach: understand the risk, explain it
+              clearly, and build a solution people can actually use.
             </p>
           </div>
         </div>
