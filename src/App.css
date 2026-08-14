@@ -1084,6 +1084,77 @@ button:focus-visible {
   text-transform: uppercase;
 }
 
+.education-section {
+  border-top: 1px solid var(--line);
+}
+
+.education-list {
+  margin-top: 76px;
+  border-top: 1px solid var(--line);
+}
+
+.education-item {
+  display: grid;
+  grid-template-columns: 0.35fr 1.15fr 1.5fr;
+  gap: clamp(28px, 5vw, 72px);
+  align-items: start;
+  padding-block: 42px;
+  border-bottom: 1px solid var(--line);
+}
+
+.education-number {
+  color: var(--muted);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.76rem;
+}
+
+.education-title > p {
+  color: var(--muted);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.76rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.education-title h3 {
+  margin-top: 12px;
+  font-size: clamp(1.5rem, 2.4vw, 2.1rem);
+  font-weight: 620;
+  letter-spacing: -0.04em;
+  line-height: 1.15;
+}
+
+.education-title > span {
+  display: block;
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 0.84rem;
+}
+
+.education-detail > p {
+  color: #c5c5c5;
+  line-height: 1.7;
+}
+
+.education-detail ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 22px;
+  padding: 0;
+  list-style: none;
+}
+
+.education-detail li {
+  padding: 6px 9px;
+  border: 1px solid var(--line);
+  color: var(--muted);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.66rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
 .site-footer {
   padding: 120px 0 30px;
   background: var(--accent);
@@ -1223,6 +1294,10 @@ button:focus-visible {
   .timeline-item {
     grid-template-columns: minmax(0, 1fr) 64px minmax(0, 1fr);
   }
+
+  .education-item {
+    grid-template-columns: 0.25fr 1fr 1.4fr;
+  }
 }
 
 @media (max-width: 720px) {
@@ -1342,6 +1417,24 @@ button:focus-visible {
     min-height: 0;
     padding: 36px 0 36px 38px;
     border-bottom: 1px solid var(--line);
+  }
+
+  .education-list {
+    margin-top: 54px;
+  }
+
+  .education-item {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding-block: 34px;
+  }
+
+  .education-number {
+    display: none;
+  }
+
+  .education-detail {
+    margin-top: 10px;
   }
 
   .timeline-axis,

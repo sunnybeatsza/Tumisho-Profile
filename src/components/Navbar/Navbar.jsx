@@ -13,6 +13,7 @@ export const Navbar = () => {
           <a href="#expertise">Expertise</a>
           <a href="#work">Work</a>
           <a href="#experience">Experience</a>
+          <a href="#education">Education</a>
         </nav>
 
         <a

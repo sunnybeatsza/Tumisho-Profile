@@ -23,6 +23,7 @@ export const Footer = () => {
           </a>
           <p>© {new Date().getFullYear()} Mohube Tumisho Makgeru</p>
           <div className="footer-links">
+            <a href="#education">Education</a>
             <a href="https://github.com/sunnybeatsza" target="_blank" rel="noreferrer">
               GitHub
             </a>
