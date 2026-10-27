@@ -93,6 +93,31 @@ export const Services = () => {
         </div>
       </article>
 
+      <article className="credential-feature" data-credential-reveal>
+        <div className="credential-label">
+          <span className="credential-mark" aria-hidden="true">✓</span>
+          <p>Industry certification</p>
+        </div>
+        <div className="credential-title">
+          <i className="bi bi-microsoft microsoft-credential-icon" aria-hidden="true" />
+          <h3>AZ-900</h3>
+        </div>
+        <div className="credential-copy">
+          <p>
+            Microsoft Azure Fundamentals validates knowledge of cloud
+            concepts, core Azure services, security, governance, and
+            cloud-management fundamentals.
+          </p>
+          <a
+            href="https://learn.microsoft.com/en-us/users/mohubetumishomakgeru-3114/credentials/653b281a6e9b88cd?ref=https%3A%2F%2Fwww.linkedin.com%2F"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Verify credential <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </article>
+
       <div className="service-grid">
         {services.map((service, index) => (
           <article

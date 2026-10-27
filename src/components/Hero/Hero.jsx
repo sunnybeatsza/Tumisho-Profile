@@ -1,10 +1,20 @@
 import React from "react";
-import ProfilePhoto from "../../Assets/Suit-Photo_Cropped.JPG";
 import CV from "../../Assets/June_Resume_2026.pdf";
+import video from "../../Assets/8084497-uhd_3840_2160_25fps_pavel_danilyuk.mp4";
 
 export const Hero = () => {
   return (
-    <main id="top">
+    <main id="top" className="hero-bg">
+      <video
+        className="hero-video"
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="auto"
+      >
+        <source src={video} type="video/mp4" />
+      </video>
       <section className="hero section-shell" aria-labelledby="hero-title">
         <div className="hero-copy">
           <p className="eyebrow" data-reveal="up">
@@ -28,7 +38,6 @@ export const Hero = () => {
             working across cybersecurity, DevOps, full-stack engineering, and
             infrastructure automation.
           </p>
-
           <div
             className="hero-actions"
             data-reveal="up"
@@ -58,7 +67,6 @@ export const Hero = () => {
                 <strong>GitHub</strong>
                 <small>@sunnybeatsza</small>
               </span>
-              <span className="social-arrow" aria-hidden="true">↗</span>
             </a>
             <a
               href="https://www.linkedin.com/in/tumisho-makgeru-742195214/"
@@ -70,20 +78,9 @@ export const Hero = () => {
                 <strong>LinkedIn</strong>
                 <small>Professional profile</small>
               </span>
-              <span className="social-arrow" aria-hidden="true">↗</span>
             </a>
           </div>
         </div>
-
-        <figure className="hero-portrait">
-          <div className="portrait-frame">
-            <img src={ProfilePhoto} alt="Mohube Tumisho Makgeru" />
-          </div>
-          <figcaption>
-            <span>Based in South Africa</span>
-            <span>Security × Engineering</span>
-          </figcaption>
-        </figure>
       </section>
     </main>
   );

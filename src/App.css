@@ -144,14 +144,50 @@ button:focus-visible {
   color: var(--text);
 }
 
+.hero-bg {
+  position: relative;
+  min-height: 100svh;
+  overflow: hidden;
+  isolation: isolate;
+  background: var(--bg);
+}
+
+.hero-bg::after {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(90deg, rgba(8, 8, 8, 0.72), rgba(8, 8, 8, 0.16) 78%),
+    linear-gradient(0deg, rgba(8, 8, 8, 0.5), transparent 48%);
+  content: "";
+  pointer-events: none;
+}
+
 .hero {
+  position: relative;
+  z-index: 1;
   display: grid;
-  grid-template-columns: minmax(0, 1.22fr) minmax(320px, 0.78fr);
-  gap: clamp(48px, 8vw, 112px);
+  grid-template-columns: minmax(0, 1fr);
   align-items: center;
   min-height: 100svh;
   padding-top: 132px;
   padding-bottom: 72px;
+}
+
+.hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: -2;
+  filter: brightness(0.82) contrast(1.05) saturate(0.82);
+}
+
+.hero-copy {
+  position: relative;
+  max-width: 820px;
 }
 
 .availability {
@@ -184,9 +220,9 @@ button:focus-visible {
 }
 
 .hero h1 {
-  max-width: 850px;
+  max-width: 760px;
   margin: 0;
-  font-size: clamp(3.7rem, 7.4vw, 7.2rem);
+  font-size: clamp(3.4rem, 6.4vw, 6.4rem);
   font-weight: 550;
   letter-spacing: -0.075em;
   line-height: 0.92;
@@ -199,8 +235,8 @@ button:focus-visible {
 }
 
 .hero-intro {
-  max-width: 620px;
-  margin-top: 36px;
+  max-width: 540px;
+  margin-top: 32px;
   color: #c8c8c8;
   font-size: clamp(1.05rem, 1.5vw, 1.25rem);
   line-height: 1.65;
@@ -262,65 +298,46 @@ button:focus-visible {
 .hero-socials {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 58px;
+  gap: clamp(20px, 4vw, 36px);
+  margin-top: 64px;
 }
 
 .hero-socials a {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  gap: 13px;
+  display: flex;
+  gap: 11px;
   align-items: center;
-  min-width: 220px;
-  min-height: 66px;
-  padding: 11px 15px;
-  border: 1px solid var(--line);
-  background: var(--bg-soft);
+  min-width: 0;
+  padding: 6px 0;
   color: var(--text);
-  transition: border-color 180ms ease, background 180ms ease, color 180ms ease, transform 180ms ease;
+  transition: color 180ms ease, transform 180ms ease;
 }
 
 .hero-socials a:hover {
-  border-color: var(--accent);
-  background: var(--accent);
-  color: var(--accent-ink);
-  transform: translateY(-2px);
+  color: var(--accent);
+  transform: translateY(-1px);
 }
 
 .hero-socials i {
   color: var(--accent);
-  font-size: 1.55rem;
+  font-size: 1.25rem;
   line-height: 1;
   transition: color 180ms ease;
 }
 
-.hero-socials a:hover i {
-  color: var(--accent-ink);
-}
-
 .social-label {
   display: grid;
-  gap: 1px;
+  gap: 0;
 }
 
 .social-label strong {
-  font-size: 0.9rem;
+  font-size: 0.82rem;
   letter-spacing: 0.01em;
 }
 
 .social-label small {
   color: var(--muted);
-  font-size: 0.7rem;
+  font-size: 0.66rem;
   letter-spacing: 0.03em;
-}
-
-.hero-socials a:hover .social-label small {
-  color: rgba(9, 9, 9, 0.7);
-}
-
-.social-arrow {
-  color: var(--muted);
-  font-size: 0.95rem;
 }
 
 .footer-links a {
@@ -330,45 +347,6 @@ button:focus-visible {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   transition: color 180ms ease;
-}
-
-.hero-portrait {
-  position: relative;
-  margin: 0;
-}
-
-.portrait-frame {
-  position: relative;
-  aspect-ratio: 0.8;
-  overflow: hidden;
-  background: var(--surface);
-}
-
-.portrait-frame::after {
-  position: absolute;
-  inset: 0;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  content: "";
-  pointer-events: none;
-}
-
-.portrait-frame img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: 50% 28%;
-}
-
-.hero-portrait figcaption {
-  display: flex;
-  justify-content: space-between;
-  gap: 16px;
-  padding-top: 14px;
-  color: var(--muted);
-  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-  font-size: 0.8rem;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
 }
 
 .section-marker {
@@ -403,11 +381,34 @@ button:focus-visible {
   line-height: 1.02;
 }
 
-.about-grid {
+.about-profile {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: clamp(40px, 7vw, 96px);
+  grid-template-columns: 269px minmax(0, 1fr);
+  gap: clamp(28px, 4vw, 56px);
+  align-items: start;
   margin-top: 72px;
+}
+
+.about-portrait {
+  width: 300px;
+  aspect-ratio: 1;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: var(--surface);
+}
+
+.about-portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 65%;
+}
+
+.about-bio-copy {
+  display: grid;
+  gap: 24px;
 }
 
 .about-lead {
@@ -520,6 +521,14 @@ button:focus-visible {
   width: clamp(112px, 12vw, 160px);
   height: auto;
   margin-bottom: 16px;
+}
+
+.microsoft-credential-icon {
+  display: block;
+  margin-bottom: 16px;
+  color: #0078d4;
+  font-size: clamp(2.4rem, 4vw, 3.2rem);
+  line-height: 1;
 }
 
 .credential-title h3 {
@@ -1398,8 +1407,7 @@ html.motion-ready .education-item[data-reveal].is-visible::after {
   }
 
   .hero {
-    grid-template-columns: 1fr 0.72fr;
-    gap: 44px;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .hero h1 {
@@ -1511,28 +1519,29 @@ html.motion-ready .education-item[data-reveal].is-visible::after {
   }
 
   .hero-socials {
-    margin-top: 46px;
+    margin-top: 52px;
   }
 
   .hero-socials a {
-    width: 100%;
+    width: auto;
   }
 
-  .hero-portrait {
-    margin-top: 12px;
-  }
-
-  .portrait-frame {
-    aspect-ratio: 0.9;
-  }
-
-  .about-grid,
   .capability-list {
     grid-template-columns: 1fr;
   }
 
-  .about-grid {
+  .about-profile {
+    grid-template-columns: 158px minmax(0, 1fr);
+    gap: 18px;
     margin-top: 50px;
+  }
+
+  .about-portrait {
+    width: 158px;
+  }
+
+  .about-bio-copy {
+    gap: 18px;
   }
 
   .capability-list {
