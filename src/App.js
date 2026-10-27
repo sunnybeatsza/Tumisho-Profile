@@ -13,10 +13,10 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 function App() {
   useEffect(() => {
     const revealElements = document.querySelectorAll(
-      "[data-reveal], [data-timeline-item], [data-credential-reveal]"
+      "[data-reveal], [data-timeline-item], [data-credential-reveal]",
     );
     const prefersReducedMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)"
+      "(prefers-reduced-motion: reduce)",
     ).matches;
 
     if (prefersReducedMotion || !("IntersectionObserver" in window)) {
@@ -42,7 +42,7 @@ function App() {
           }
         });
       },
-      { rootMargin: "0px 0px -8% 0px", threshold: 0.14 }
+      { rootMargin: "0px 0px -8% 0px", threshold: 0.14 },
     );
 
     revealElements.forEach((element) => {

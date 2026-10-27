@@ -1,4 +1,5 @@
 import React from "react";
+import ProfilePhoto from "../../Assets/Profile_picture.jpg";
 
 const capabilities = [
   "Threat & risk analysis",
@@ -25,26 +26,38 @@ export const AboutMe = () => {
         </h2>
 
         <div
-          className="about-grid"
+          className="about-profile"
           data-reveal="up"
           style={{ "--reveal-delay": "120ms" }}
         >
-          <p className="about-lead">
-            I bring together cybersecurity thinking, software development, and
-            business operations to solve practical problems, not just technical
-            ones.
-          </p>
-          <div className="about-detail">
-            <p>
-              My experience supporting international clients has sharpened my
-              approach to service delivery, renewals, documentation, and issue
-              resolution. I pair that client perspective with hands-on work in
-              Java, Python, JavaScript, React, Node.js, SQL, Linux, and Docker.
+          <figure className="about-portrait">
+            <img src={ProfilePhoto} alt="Mohube Tumisho Makgeru" />
+          </figure>
+          <div className="about-bio-copy">
+            <p className="about-lead">
+              I&apos;m the Cybersecurity Lead at Mavuma Enterprise, working
+              remotely after an internal promotion in August 2026. I turn
+              business and technical risks into prioritized actions and help
+              teams build security into day-to-day delivery.
             </p>
-            <p>
-              The result is a balanced approach: understand the risk, explain it
-              clearly, and build a solution people can actually use.
-            </p>
+            <div className="about-detail">
+              <p>
+                I coordinate vulnerability management from scanning and
+                triage through remediation and verification, and plan internal
+                security assessments and penetration tests using Nmap,
+                ssh-audit, Nikto, and Kali Linux. I also review security for
+                software releases, infrastructure changes, access controls,
+                and secrets handling.
+              </p>
+              <p>
+                My work includes strengthening least-privilege IAM and
+                credential practices, coordinating incident readiness and
+                response, and promoting security awareness. I partner with
+                engineering teams to bring security checks into Agile and
+                CI/CD workflows. I hold CompTIA Security+ and Microsoft Azure
+                Fundamentals (AZ-900) certifications.
+              </p>
+            </div>
           </div>
         </div>
 
